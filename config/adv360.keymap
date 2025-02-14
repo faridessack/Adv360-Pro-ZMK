@@ -25,12 +25,18 @@
         Go_Mad: Go_Mad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp EXCL &kp M &kp A &kp D &kp I &kp K &kp W &kp E &kp N2 &kp N1>,
-                <&macro_tap>,
-                <&kp LC(RIGHT_BRACKET)>;
-
+            bindings = <&kp EXCL &kp M &kp A &kp D &kp I &kp K &kp W &kp E &kp N2 &kp N1 &kp RET>;
             label = "GO_MAD";
+            wait-ms = <20>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Pwd_hotkey {
+            bindings = <&Go_Mad>;
+            key-positions = <35 74>;
         };
     };
 
