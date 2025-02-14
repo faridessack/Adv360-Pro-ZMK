@@ -29,6 +29,20 @@
             label = "GO_MAD";
             wait-ms = <20>;
         };
+
+        Bring_TEAMS: Bring_TEAMS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_WIN &kp T &kp E &kp A &kp M &kp S &kp RET>;
+            label = "BRING_TEAMS";
+        };
+
+        Bring_OUTLOOK: Bring_OUTLOOK {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_WIN &kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp RET>;
+            label = "BRING_OUTLOOK";
+        };
     };
 
     combos {
@@ -37,6 +51,16 @@
         Pwd_hotkey {
             bindings = <&Go_Mad>;
             key-positions = <35 74>;
+        };
+
+        TEAMS_hotkey {
+            bindings = <&Bring_TEAMS>;
+            key-positions = <20 35>;
+        };
+
+        OUTLOOK_hotkey {
+            bindings = <&Bring_OUTLOOK>;
+            key-positions = <35 21>;
         };
     };
 
